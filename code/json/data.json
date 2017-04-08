@@ -1,0 +1,44 @@
+supported_language ={"lang":
+[
+	{
+		"language" : "English", 
+		"code" : "en"
+	},
+	{
+		"language" : "‎हिन्दी", 
+		"code" : "hi"
+	},
+	{
+		"language" : "فارسی", 
+		"code" : "fa"
+	},
+	{
+		"language" : "Deutschland", 
+		"code" : "de" 
+	},
+	{
+		"language" : "Bahasa Indonesia", 
+		"code" : "id"
+	},
+	{
+		"language" : "‎română", 
+		"code" : "ro" 
+	},
+	{
+		"language" : "‎ไทย", 
+		"code" : "th"
+	},
+	{
+		"language" : "‎español", 
+		"code" : "es"  
+	},
+	{
+		"language" : "‎Nederlands", 
+		"code" : "nl"
+	},
+	{
+		"language" : "‎português", 
+		"code" : "pt"  
+	}
+]
+}

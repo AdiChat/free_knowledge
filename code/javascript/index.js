@@ -11,3 +11,19 @@ document.getElementById("header").addEventListener("click", function()
         sidebar.style.display = "none" // Hide sidebar on click
     }
 });
+
+window.onload = function() 
+{
+    // Load the available languages in the dropdown menu
+    var obj = supported_language;
+    var select = document.getElementById("language");
+
+    for (var i=0; i < obj.lang.length; i++)
+    {
+      var option = document.createElement("option");
+      option.id = obj.lang[i].code;
+      option.value = obj.lang[i].code;
+      option.innerHTML = obj.lang[i].language;
+      select.appendChild(option);
+    }
+};
