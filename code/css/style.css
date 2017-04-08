@@ -1,0 +1,105 @@
+body
+{
+    margin: 0;
+    padding: 0;
+}
+
+h1 
+{
+    display: inline;
+    font-size: 20px;
+}
+
+header 
+{
+    padding: 5px;
+    font-size: 25px
+    background: #67b11c;
+    background: linear-gradient(#72c41f, #5c9e19);
+    border: 2px solid #467813;
+    border-radius: 5px;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+    top: 0;
+}
+
+#header:before 
+{
+    content: '\2630';
+    font-size: 25px;
+    padding-right: 5px;
+}
+
+#sidebar 
+{
+    display: none;
+    height: 100%;
+    width: 50%;
+    background-color: #B2D0D6;
+    position: fixed !important;
+    z-index: 1;
+    overflow: auto;
+    padding: 10px;
+    top: 40px;
+}
+
+#search-title 
+{
+    width: 100%;
+    max-width: 220px;
+    display: block;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+#language 
+{
+    width: 100%;
+    max-width: 220px;
+    display: block;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+#submit
+{
+    width: 100%;
+    max-width: 220px;
+    display: block;
+    background: #000000;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+#content 
+{
+    width: auto;
+    padding-left: 0;
+    padding-top: 25px;
+    margin: 10px;
+}
+
+@media only screen and (min-width: 768px) 
+{
+    header 
+    {
+        padding: 10px; 
+    }
+
+    #sidebar 
+    {
+        display: block;
+        width: 250px;
+        top: 50px;
+    }
+
+    #content 
+    {
+        padding-left: 250px;
+        padding-top: 10px;
+    }
+}
