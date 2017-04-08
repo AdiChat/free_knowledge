@@ -26,7 +26,8 @@ function find_free_content()
 
 function httpGetAsync(query, lang) 
 {
-    url = "https://" + lang + ".wikipedia.org/w/api.php?action=query&origin=*&prop=extracts&converttitles=zh&format=json&exintro=&titles=" + query;
+    // Convert titles not available for all languages
+    url = "https://" + lang + ".wikipedia.org/w/api.php?action=query&origin=*&prop=extracts&format=json&titles=" + query;
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.onreadystatechange = function () 
     {

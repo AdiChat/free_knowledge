@@ -10,21 +10,21 @@
 <body>
     <header>
         <span id="header"></span>
-        <h1>Free Knowledge</h1>
+        <h1>Free Knowledge 📚 for all</h1>
     </header>
     <div id="sidebar">
         <div class="search" align="center">
             <form id="search">
-                <input id="search-title" type="text" name="query" placeholder="Ask me anything">
+                <input id="search-title" type="text" name="query" placeholder="Ask anything (eg: water)">
                 <select id="language" name="language"></select>
                 <button type="submit" id="submit" onclick="find_free_content(); return false;">Fetch</button>
             </form>
         </div>
     </div>
     <div id="content">
-        <center><img style='padding-top: 100px;' src='public/logo.png'></center> 
+        <center><img style='padding-top: 50px;' height='500' width='500' src='public/logo.png'></center> 
     </div>
-        <script type="text/javascript" src="json/data.json"></script>
+        <script type="text/javascript" src="data/language.json"></script>
         <script src="javascript/index.js"></script>
 </body>
 </html>
