@@ -21,10 +21,43 @@ function fill_supported_languages()
 
 function find_free_content()
 {
-    httpGetAsync(document.getElementById("search-title").value, document.getElementById('language').value)
+    GetFreeContent(document.getElementById("search-title").value, document.getElementById('language').value);
+    GetSuggestedTopics(document.getElementById("search-title").value, document.getElementById('language').value);
 }
 
-function httpGetAsync(query, lang) 
+function GetSuggestedTopics(query, lang) 
+{
+    url = "https://api.duckduckgo.com/?q="+query+"&format=json"
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.onreadystatechange = function () 
+    {
+        if (xmlHttp.readyState == 4 && xmlHttp.status == 200) 
+        {
+            var result = JSON.parse(xmlHttp.responseText);
+            result = result.RelatedTopics;
+            console.log(result[0]);
+            var arrayLength = result.length;
+            var datarelated = '<h2> Related Topics for further knowledge </h2><br><ul>';
+            for (var i = 0; i < arrayLength; i++) 
+            {
+                datarelated = datarelated + '<li>'+result[i].Result +'</li>'+ '<br>';
+            }
+            datarelated = datarelated + '</ul>';
+            if (1==1) 
+            {
+                document.getElementById('recommended_links').innerHTML = datarelated;
+            }
+            else 
+            {
+                document.getElementById('recommended_links').innerHTML = "We could not find any free information. 😢";
+            }
+        }
+    };
+    xmlHttp.open("GET", url, true);
+    xmlHttp.send();
+}
+
+function GetFreeContent(query, lang) 
 {
     // Convert titles not available for all languages
     url = "https://" + lang + ".wikipedia.org/w/api.php?action=query&origin=*&prop=extracts&format=json&titles=" + query;
